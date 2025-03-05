@@ -15,7 +15,7 @@ These are just fun images/animations from different renders throughout the years
 
 
 
-Old Work early 2000s - Largely Fun Course Work - But work that has stuck with me in some way.
+2000. At this point We'll look at some of my old work from `99 to the early 200s. This is largely fun course work (or going beyond that course work). This work has stuck with me in some way however and thus it is here.
 
 2001. (or roughly 2001) Ray Tracing with BRDFs using Ashikhmin's anisotropic phong BRDF. For this section and the next, you can see my progress of building up the renderer at [my pages](http://shaunramsey.com/research/imagesynth) along with lots more test values. These images were done as a study in an image synthesis course with Peter Shirley. I also worked on the star-ray ray tracer for 
 
@@ -24,7 +24,7 @@ Old Work early 2000s - Largely Fun Course Work - But work that has stuck with me
 
 2001. (or roughly 2001) Photon Mapping with ray traced images using 100 rays per pixel. In order these are: 1x1 Texels w/ 100k photons, 10x10 Texels with 100k photons and 200x200 Texels with 100m photons.
 
-<img src="photonmapping/1.gif"> <img src="photonmapping/2.gif"> <img src="photonmapping/10m.gif">
+<img src="photonmapping/1.gif" width=200> <img src="photonmapping/2.gif" width=200> <img src="photonmapping/10m.gif" width=200>
 
 
 2001. (or roughly 2001) Terrain Compression Using Wavelets. The left image is the original and the right uses 5% of the coefficients. More at: [my page](http://shaunramsey.com/research/waveletterraincompression/)
