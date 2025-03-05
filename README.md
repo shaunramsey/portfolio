@@ -9,9 +9,13 @@ March 2025
 <img src="raymarch/raymarchimage.png" width="200"> <img src="raymarch/raymarchimage2.png" width="200">
 
 
+2008. I worked on Interactive Volumentric Shadow in Participating Media with Chris Wyman in 2008. In this work we used ray marching between shadow volume slices to get those beautiful god rays in participating media. Our results looked so very close to ray traced results. The shader is quite straight forward: [fragment shader](volumetricshadows/shader.frag.glsl)
+
+<img src="volumentricshadows/rtshadow.png">
 
 
-Old Work early 2000s
+
+Old Work early 2000s - Largely Fun Course Work - But work that has stuck with me.
 
 Terrain Compression Using Wavelets. The left image is the original and the right uses 5% of the coefficients. More at: [my page](http://shaunramsey.com/research/waveletterraincompression/)
 
