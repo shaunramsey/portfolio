@@ -9,7 +9,7 @@ These are just fun images/animations from different renders throughout the years
 <img src="raymarch/raymarchimage.png" width="200"> <img src="raymarch/raymarchimage2.png" width="200">
 
 
-2017. Some of that work with students on the super fractal led to us building a few fun visualizations (mostly to help the students learn iterative functions) like:
+2018. Some of that work with students on the super fractal led to us building a few fun visualizations (mostly to help the students learn iterative functions) like:
 ![Julia Set Animation](https://github.com/shaunramsey/FractalExploration/blob/master/Iterations/julia_set_animation2.gif)
 ![Julia Set](https://github.com/shaunramsey/FractalExploration/blob/master/Iterations/julia_set.png)
 ![MandelBrot Set](https://github.com/shaunramsey/FractalExploration/blob/master/Iterations/Mandelbrot_Set.png)
