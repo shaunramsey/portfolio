@@ -1,4 +1,4 @@
-# Portfolio of Fun Renders
+# Ramsey's Portfolio of Fun Renders (and [Other Things](Others.md))
 
 These are just fun images/animations from different renders throughout the years. The concept of fun or interesting applies to me - so your mileage may vary. I'll do my best to contextualize their creation. Note that this isn't a full development portfolio but I'll link to some of those [here](Others.md). 
 
