@@ -8,7 +8,15 @@ These are just fun images/animations from different renders throughout the years
 
 <img src="raymarch/raymarchimage.png" width="200"> <img src="raymarch/raymarchimage2.png" width="200">
 
-2017. The exploration and discovery of the super fractal with Dr. Poulsen was a lot of fun. Building the renderer and parallelizing the computation on cpu was enjoyable. I may explore with making a fragment shader to do the same computation shortly, just as an exersize in working with fragment shaders again. Nevertheless, the images are topologically equivalent to the Lyapunov fractals and were a joy to develop. You can see more about that [here](http://shaunramsey.com/research/superfractal/)
+
+2017. Some of that work with students on the super fractal led to us building a few fun visualizations (mostly to help the students learn iterative functions) like:
+![Julia Set Animation](https://github.com/shaunramsey/FractalExploration/blob/master/Iterations/julia_set_animation2.gif)
+![Julia Set](https://github.com/shaunramsey/FractalExploration/blob/master/Iterations/julia_set.png)
+![MandelBrot Set](https://github.com/shaunramsey/FractalExploration/blob/master/Iterations/Mandelbrot_Set.png)
+![3D Fractal](https://github.com/r-chambers/FractalExploration/blob/master/Fractals/Markus-Lyapunov%20Fractals/Anim_3D_Fractal_ABC.gif)
+
+
+2017. The exploration and discovery of the super fractal with Dr. Poulsen was a lot of fun. Building the renderer and parallelizing the computation on cpu was enjoyable. I may explore with making a fragment shader to do the same computation shortly, just as an exersize in working with fragment shaders again. Nevertheless, the images are topologically equivalent to the Lyapunov fractals and were a joy to develop. You can see more about that [here](http://shaunramsey.com/research/superfractal/). I've done more work on that fractal with students since then with a few presentations [here](http://sections.maa.org/epadel/meetings/2018/fall/students.php#1) and [there](http://sections.maa.org/mddcva/MeetingFiles/Fall2021Meeting/Fall2021Schedule.pdf) and even beyond. 
 
 <img src="superfractal/BBBAAA0.png" width="200"> <img src="superfractal/BBBAAA29.png" width="200"> <img src="superfractal/BBBBBBAAAAAA1.png" width="200">
 
