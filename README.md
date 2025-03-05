@@ -22,7 +22,7 @@ Some Image Compression. Left is DCT, Middle is HAAR, and Right is Linear B-Splin
 <img src="wavelets/dct5.jpg"> <img src="wavelets/haar5.jpg"> <img src="wavelets/lbs5.jpg">
 
 
-Ray Tracing with BRDFs using Ashikhmin's anisotropic phong BRDF. 
+Ray Tracing with BRDFs using Ashikhmin's anisotropic phong BRDF. For this section and the next, you can see my progress of building up the renderer at [my pages](http://shaunramsey.com/research/imagesynth) along with lots more test values. These images were done as a study in an image synthesis course with Peter Shirley.
 
 <img src="brdf/brdf1.gif"> <img src="brdf/brdf2.gif">
 
