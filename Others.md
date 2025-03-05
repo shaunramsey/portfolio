@@ -9,6 +9,8 @@ Later I'd bring a team to NASA Space Apps Challenge in 2017. We built a couple o
 
 Sometimes I've done some development for my own purposes. Early on in KSP's history I built [this calculator](http://cthulhudreams.us/ksp/) to tackle some delta v computations. Some of that moved in game or was done completely in mods. The UX on this is quite awful, but it was tucked away and hidden meant only for me to muck about - so if you're trying to use it, yikes!
 
+Kid got into playing with the Rubik's Cube. So I built a small timer to track his progress. It also let's you compare with other folks using the timer. If you check this out, don't laugh at my horrible cube solve times. That is tucked away [here](https://clockworkcards2.web.app/cube/ref.html). It's amazing to watch him solve a cube in sub 20s!
+
 I have a myriad of websites and webdev over the years ranging from custom systems for TTRPGs. Most of these are built for me and 3-4 friends, so judge them lightly as they were certainly meant as tools and not as end-user sites with great UX and the like. Some examples include.
 
 - [clockwork cards](https://clockworkcards2.web.app/) using a mechanic from Clockwork Dominion TTRPG.
