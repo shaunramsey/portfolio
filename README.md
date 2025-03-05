@@ -11,7 +11,7 @@ March 2025
 
 2008. I worked on Interactive Volumentric Shadow in Participating Media with Chris Wyman in 2008. In this work we used ray marching between shadow volume slices to get those beautiful god rays in participating media. Our results looked so very close to ray traced results. The shader is quite straight forward: [fragment shader](volumetricshadows/shader.frag.glsl)
 
-<img src="volumentricshadows/rtshadow.png">
+<img src="volumetricshadows/rtshadow.png">
 
 
 
