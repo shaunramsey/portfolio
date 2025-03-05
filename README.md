@@ -22,16 +22,8 @@ Ray Tracing with BRDFs using Ashikhmin's anisotropic phong BRDF
 
 Photon Mapping with ray traced images using 100 rays per pixel.
 
-1 Texel per object with 100,000 photons
+In order these are: 1x1 Texels w/ 100k photons, 10x10 Texels with 100k photons and 200x200 Texels with 100m photons.
 
-<img src="photonmapping/1.gif">
-
-10 Texels per object with 100,000 photons
-
-<img src="photonmapping/2.gif">
-
-200 Texels per object with 100,000,000 photons
-
-<img src="photonmapping/10m.gif">
+<img src="photonmapping/1.gif"> <img src="photonmapping/2.gif"> <img src="photonmapping/10m.gif">
 
 
