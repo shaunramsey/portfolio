@@ -5,8 +5,7 @@ These are just fun images/animations from different renders throughout the years
 March 2025
  Played around with raymarching and fragment shaders today. Produced some fun images.
 
-<img src="raymarchimage.png" width="200">
-<img src="raymarchimage2.png" width="200">
+<img src="raymarchimage.png" width="200"> <img src="raymarchimage2.png" width="200">
 
 I used shadertoy to produce these images via a fragment shader. I did not fine tune the depth (although perhaps it does not need it?).
 Some code was taken from: https://www.shadertoy.com/view/XsB3Rm
@@ -14,6 +13,10 @@ Some code was taken from: https://www.shadertoy.com/view/XsB3Rm
 
 
 Old Work early 2000s
+
+Terrain Compression Using Wavelets. The left image is the original and the right uses 5% of the coefficients
+
+<img src="wavelets/orig.jpg"> <img src="wavelets/cubic5.jpg">
 
 Ray Tracing with BRDFs using Ashikhmin's anisotropic phong BRDF
 
