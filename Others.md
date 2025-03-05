@@ -4,8 +4,7 @@ My dive into 'modern' mobile development probably began with a pair of games bui
 - [avie flowers](http://shaunramsey.com/avieflowers/) - a drawing app that could allow you to build fractal-like strikes with a few swipes - rather complete painting application
 - [flag assault](http://shaunramsey.com/flagassault/) - a turn-based game where you captured resources and battled - with some bluetooth multiplayer or you could compete against an AI.
 
-Later I'd bring a team to NASA Space Apps Challenge in 2017. We built a couple of apps. You can see 
-<img src="https://github.com/shaunramsey/SolarEnergyPlanner/blob/master/device-2017-05-04-234456.png" width="200">
+Later I'd bring a team to NASA Space Apps Challenge in 2017. We built a couple of apps to submit for that challenge [here](https://2017.spaceappschallenge.org/challenges/earth-and-us/you-are-my-sunshine/teams/dream-team-1/stream). You can see <img src="https://github.com/shaunramsey/SolarEnergyPlanner/blob/master/device-2017-05-04-234456.png" width="200">
 
 Sometimes I've done some development for my own purposes. Early on in KSP's history I built [this calculator](http://cthulhudreams.us/ksp/) to tackle some delta v computations. Some of that moved in game or was done completely in mods. The UX on this is quite awful, but it was tucked away and hidden meant only for me to muck about - so if you're trying to use it, yikes!
 
