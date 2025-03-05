@@ -14,6 +14,7 @@ Some code was taken from: https://www.shadertoy.com/view/XsB3Rm
 
 Old Work early 2000s
 Photon Mapping: 100 rays per pixel.
+
 1 Texel per object with 100,000 photons
 <img src="photonmapping/1.gif">
 
