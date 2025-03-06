@@ -3,7 +3,7 @@
 These are just fun images/animations from different renders throughout the years. The concept of fun or interesting applies to me - so your mileage may vary. Dates are approximations but they should be accurate. I'll do my best to contextualize their creation. Note that this isn't a full development portfolio but I'll link to some of those [here](Others.md). 
 
 
-2025. March. Played around with raymarching and fragment shaders today. Produced some fun images. I find it really neat that this uses a single signed distance function which is is simply a composite of other signed distance functions. min/max and some smoothing is all you need. I used shadertoy to produce these images via a fragment shader. I did not fine tune the depth (although perhaps it does not need it?). I borrowed from [here](https://www.shadertoy.com/view/XsB3Rm) a bit in my code. You can see the [fragment shader](raymarch/raymarchshader.frag)
+2025. March. Played around with raymarching and fragment shaders today. Produced some fun images. I find it really neat that this uses a single signed distance function which is is simply a composite of other signed distance functions. min/max and some smoothing is all you need. I used shadertoy to produce these images via a fragment shader. I did not fine tune the depth (although perhaps it does not need it?). I borrowed from [here](https://www.shadertoy.com/view/XsB3Rm) a bit in my code. You can see the [fragment shader](raymarch/raymarchshader.frag). 
 
 
 <img src="raymarch/raymarchimage.png" height="200"> <img src="raymarch/raymarchimage2.png" height="200">
@@ -18,6 +18,7 @@ These are just fun images/animations from different renders throughout the years
 
 <img src="superfractal/BBBAAA0.png" width="200"> <img src="superfractal/BBBAAA29.png" width="200"> <img src="superfractal/BBBBBBAAAAAA1.png" width="200">
 
+2014. I was invited to produce a "computed" musical composition based on a photograph of an Icelandic Sea Wall by John Ruppert. This doesn't belong in rendering ... perhaps, but the end result was a rendering and musical composition that I created based on the original image. You can see that [here](http://shaunramsey.com/scholarly/Wall.mp4). I'll throw it here anyway because I think it is interesting.
 
 2008. I worked on Interactive Volumentric Shadow in Participating Media with Chris Wyman in 2008. In this work we used ray marching between shadow volume slices to get those beautiful god rays in participating media. Our results looked so very close to ray traced results. The shader is quite straight forward: [fragment shader](volumetricshadows/shader.frag.glsl). You can see more about that: [here](http://shaunramsey.com/research/vol/)
 
