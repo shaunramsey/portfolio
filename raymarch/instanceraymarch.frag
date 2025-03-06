@@ -6,6 +6,7 @@ const float PI = 3.14159265359;
 const float DEG_TO_RAD = PI / 180.0;
 const float stop_threshold = 0.001;
 
+const float max_depth = 200.0;
 
 // Octahedron SDF - https://iquilezles.org/articles/distfunctions/
 float sdOctahedron(vec3 p, float s) {
@@ -40,9 +41,9 @@ float sdUnion_s( float a, float b, float k ) {
 
 float sceneSDF(vec3 p) {
   vec3 q = p;
-  q.x = fract(p.x) - 0.5;     // spacing: 1
+  q.x = fract(p.x) - 0.5;     
   q.y = fract(p.y) - 0.5;
-  q.z =  fract(p.z) - .5; // spacing: .25
+  q.z =  fract(p.z) - 0.5; // can use mod if you want other spacing
   
   float sf = 1.5;
   
@@ -129,8 +130,8 @@ vec3 shading( vec3 v, vec3 n, vec3 dir, vec3 eye ) {
 }
 
 float march(vec3 eye, vec3 viewRayDirection, inout float depth, inout vec3 n) {
-    float start = 0.0;
-    float end = 2000.0;
+    float start = 1.0;
+    float end = max_depth;
     depth = start;
     for(int i = 0; i < 512; i++) 
     {
@@ -173,7 +174,7 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
     // Time varying pixel color
     //vec3 col = 0.5 + 0.5*cos(iTime+uv.xyx+vec3(0,2,4));
     vec3 dir = ray_dir( 45.0, iResolution.xy, fragCoord.xy);
-    float depth = 3.0;
+    float depth = 0.0;
     vec3 n; // the normal
     vec3 eye = vec3(0.0, 0.0, 3.5);
     mat3 rot = rotationXY( ( iMouse.xy - iResolution.xy * 0.5 ).yx * vec2( 0.01, -0.01 ) );
@@ -182,7 +183,7 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
     
     
     march(eye, dir, depth, n);
-    if(depth >= 9.9) {    // Output to screen
+    if(depth >= max_depth) {    // Output to screen
       fragColor = texture(iChannel0, dir);
       //fragColor = vec4(depth,depth,0.0,1.0);
     } else {

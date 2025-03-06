@@ -6,10 +6,12 @@ These are just fun images/animations from different renders throughout the years
 
 <img src="superfractal/lyap.png" height="200"> <img src="superfractal/superfractal.png" height="200">
 
-2025. March. Played around with raymarching and fragment shaders today. Produced some fun images. I find it really neat that this uses a single signed distance function which is is simply a composite of other signed distance functions. min/max and some smoothing is all you need. I used shadertoy to produce these images via a fragment shader. I did not fine tune the depth (although perhaps it does not need it?). I borrowed from [here](https://www.shadertoy.com/view/XsB3Rm) a bit in my code. You can see the [fragment shader](raymarch/raymarchshader.frag). 
+ Played around with raymarching and fragment shaders today. Produced some fun images. I find it really neat that this uses a single signed distance function which is is simply a composite of other signed distance functions. min/max and some smoothing is all you need. I used shadertoy to produce these images via a fragment shader. I did not fine tune the depth (although perhaps it does not need it?). I borrowed from [here](https://www.shadertoy.com/view/XsB3Rm) a bit in my code. You can see the [fragment shader](raymarch/raymarchshader.frag). After a few days I decided to throw in some instancing in this [fragment shader](raymarch/instanceraymarch.frag). I think perhaps rotating around the view/ray march might be next for some twirly adventures.
 
 
 <img src="raymarch/raymarchimage.png" height="200"> <img src="raymarch/raymarchimage2.png" height="200">
+
+<img src="raymarch/instance1.png" height="200"> <img src="raymarch/instance2.png" height="200">
 
 
 2018. Some of that work with students on the super fractal led to us building a few fun visualizations (mostly to help the students learn iterative functions) like:
