@@ -1,6 +1,6 @@
 # Ramsey's Portfolio of Fun Renders (and [Other Things](Others.md))
 
-These are just fun images/animations from different renders throughout the years. The concept of fun or interesting applies to me - so your mileage may vary. I'll do my best to contextualize their creation. Note that this isn't a full development portfolio but I'll link to some of those [here](Others.md). 
+These are just fun images/animations from different renders throughout the years. The concept of fun or interesting applies to me - so your mileage may vary. Dates are approximations but they should be accurate. I'll do my best to contextualize their creation. Note that this isn't a full development portfolio but I'll link to some of those [here](Others.md). 
 
 
 2025. March. Played around with raymarching and fragment shaders today. Produced some fun images. I find it really neat that this uses a single signed distance function which is is simply a composite of other signed distance functions. min/max and some smoothing is all you need. I used shadertoy to produce these images via a fragment shader. I did not fine tune the depth (although perhaps it does not need it?). I borrowed from [here](https://www.shadertoy.com/view/XsB3Rm) a bit in my code. You can see the [fragment shader](raymarch/raymarchshader.frag)
@@ -10,10 +10,10 @@ These are just fun images/animations from different renders throughout the years
 
 
 2018. Some of that work with students on the super fractal led to us building a few fun visualizations (mostly to help the students learn iterative functions) like:
-![Julia Set Animation](https://github.com/shaunramsey/FractalExploration/blob/master/Iterations/julia_set_animation2.gif)
-![Julia Set](https://github.com/shaunramsey/FractalExploration/blob/master/Iterations/julia_set.png)
-![MandelBrot Set](https://github.com/shaunramsey/FractalExploration/blob/master/Iterations/Mandelbrot_Set.png)
-![3D Fractal](https://github.com/r-chambers/FractalExploration/blob/master/Fractals/Markus-Lyapunov%20Fractals/Anim_3D_Fractal_ABC.gif)
+![Julia Set Animation]("https://github.com/shaunramsey/FractalExploration/blob/master/Iterations/julia_set_animation2.gif" width="200")
+![Julia Set]("https://github.com/shaunramsey/FractalExploration/blob/master/Iterations/julia_set.png" width="200")
+![MandelBrot Set]("https://github.com/shaunramsey/FractalExploration/blob/master/Iterations/Mandelbrot_Set.png" width="200")
+![3D Fractal]("https://github.com/r-chambers/FractalExploration/blob/master/Fractals/Markus-Lyapunov%20Fractals/Anim_3D_Fractal_ABC.gif" width="200")
 
 
 2017. The exploration and discovery of the super fractal with Dr. Poulsen was a lot of fun. Building the renderer and parallelizing the computation on cpu was enjoyable. I may explore with making a fragment shader to do the same computation shortly, just as an exersize in working with fragment shaders again. Nevertheless, the images are topologically equivalent to the Lyapunov fractals and were a joy to develop. You can see more about that [here](http://shaunramsey.com/research/superfractal/). I've done more work on that fractal with students since then with a few presentations [here](http://sections.maa.org/epadel/meetings/2018/fall/students.php#1) and [there](http://sections.maa.org/mddcva/MeetingFiles/Fall2021Meeting/Fall2021Schedule.pdf) and even beyond. 
