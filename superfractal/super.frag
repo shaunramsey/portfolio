@@ -29,7 +29,7 @@ float nextx(vec2 uv, float xnot, int i) {
    return xnot;
 }
 
-//whats the b value from uv.x and uv.y given iters and n)
+//whats the b value from uv.x and uv.y given iters and n
 float getb(int i, vec2 uv) {
   return (i % (2 * n) < n) ? uv.x : uv.y;
 }
@@ -38,9 +38,9 @@ float warmup(vec2 uv, float xnot) {
    // b value alternates with  uv.x n/2 times then uv.y n/2 times
     for(int i = 0; i < num_warmups; i++) {
       //lyap uses 
-       xnot = nextx(uv, xnot, i);
+      // xnot = nextx(uv, xnot, i);
       // super fractal
-      //  xnot = F(xnot, getb(i,uv));
+        xnot = F(xnot, getb(i,uv));
     }
     return xnot;
 }

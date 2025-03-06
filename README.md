@@ -23,6 +23,8 @@ These are just fun images/animations from different renders throughout the years
 
 2014. I was invited to produce a "computed" musical composition based on a photograph of an Icelandic Sea Wall by John Ruppert. This doesn't belong in rendering ... perhaps, but the end result was a rendering and musical composition that I created based on the original image. You can see that [here](http://shaunramsey.com/scholarly/Wall.mp4). I'll throw it here anyway because I think it is interesting.
 
+Give it a listen!
+
 2008. I worked on Interactive Volumentric Shadow in Participating Media with Chris Wyman in 2008. In this work we used ray marching between shadow volume slices to get those beautiful god rays in participating media. Our results looked so very close to ray traced results. The shader is quite straight forward: [fragment shader](volumetricshadows/shader.frag.glsl). You can see more about that: [here](http://shaunramsey.com/research/vol/)
 
 <img src="volumetricshadows/rtshadow.png" width="400">
