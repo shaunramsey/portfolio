@@ -2,9 +2,9 @@
 
 These are just fun images/animations from different renders throughout the years. The concept of fun or interesting applies to me - so your mileage may vary. Dates are approximations but they should be accurate. I'll do my best to contextualize their creation. Note that this isn't a full development portfolio but I'll link to some of those [here](Others.md). 
 
-2025. March. Continued exploration of fragment shaders on shadertoy today. On the way to super fractals, produced the image below, using this [fragment shader](superfractal/lyap.frag). Will be producing the superfractal next!
+2025. March. Continued exploration of fragment shaders on shadertoy today. On the way to super fractals, produced the image below, using this [fragment shader](superfractal/lyap.frag). I then moved along to my super fractal and used this [fragment shader](superfractal/super.frag) which is obviously derived from the paper and the other fragment shader I wrote. Anyway, the impressive bit is 12k iterations at 60fps. Gotta love modern GPUs!
 
-<img src="superfractal/lyap.png" height="200">
+<img src="superfractal/lyap.png" height="200"> <img src="superfractal/superfractal.png" height="200">
 
 2025. March. Played around with raymarching and fragment shaders today. Produced some fun images. I find it really neat that this uses a single signed distance function which is is simply a composite of other signed distance functions. min/max and some smoothing is all you need. I used shadertoy to produce these images via a fragment shader. I did not fine tune the depth (although perhaps it does not need it?). I borrowed from [here](https://www.shadertoy.com/view/XsB3Rm) a bit in my code. You can see the [fragment shader](raymarch/raymarchshader.frag). 
 
