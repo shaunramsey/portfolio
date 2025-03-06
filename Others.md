@@ -8,7 +8,7 @@ My dive into 'modern' mobile development probably began with a pair of apps buil
 - [avie flowers](http://shaunramsey.com/avieflowers/) - a drawing app that could allow you to build fractal-like strikes with a few swipes - rather complete painting application with some extra layers for the fractalization
 - [flag assault](http://shaunramsey.com/flagassault/) - a turn-based game where you captured resources and battled - with some bluetooth multiplayer or you could compete against an AI.
 
-| Description | Sample Image |
+| Application Description | App Image |
 |-------------|--------------|
 | Later I'd bring a team to NASA Space Apps Challenge in 2017. We built a couple of apps to submit for that challenge [here](https://2017.spaceappschallenge.org/challenges/earth-and-us/you-are-my-sunshine/teams/dream-team-1). You can see an example screen that pulls in real solar data and balances the energy consumption against incoming power and, hey, we were a global nominee as a local people's choice winner.| <img src="https://github.com/shaunramsey/SolarEnergyPlanner/blob/master/device-2017-05-04-234456.png" width="200">.|
 
