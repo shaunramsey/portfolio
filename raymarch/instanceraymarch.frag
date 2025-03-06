@@ -6,7 +6,7 @@ const float PI = 3.14159265359;
 const float DEG_TO_RAD = PI / 180.0;
 const float stop_threshold = 0.001;
 
-const float max_depth = 200.0;
+const float max_depth = 50.0;
 
 // Octahedron SDF - https://iquilezles.org/articles/distfunctions/
 float sdOctahedron(vec3 p, float s) {
@@ -21,6 +21,12 @@ vec3 palette(float t) {
 }
 
 
+//2d rotation matrix
+mat2 rot(float angle) {
+return mat2(cos(angle), -sin(angle), sin(angle), cos(angle));
+}
+
+
 float sphereSDF(vec3 p, float r) {
   return length(p) - r;
 }
@@ -30,8 +36,12 @@ float spherecSDF(vec3 p, vec3 c, float r) {
 }
 
 float boxSDF( vec3 p , vec3 b ) {
+ p.xz *= rot(iTime);
+ p.xy *= rot(iTime*0.2);
  vec3 d = abs(p) - b;
- return min(max(d.x,max(d.y,d.z)),0.0) + length(max(d,0.0));
+  
+ float sd = min(max(d.x,max(d.y,d.z)),0.0) + length(max(d,0.0));
+ return sd;
 }
 
 float sdUnion_s( float a, float b, float k ) {
@@ -39,11 +49,15 @@ float sdUnion_s( float a, float b, float k ) {
     return mix( b, a, h ) - k*h*(1.0-h);
 }
 
+
+
 float sceneSDF(vec3 p) {
   vec3 q = p;
-  q.x = fract(p.x) - 0.5;     
+  p.xy *= rot(iTime*0.2);
+  p.z += iTime*0.3;
+  q.x = fract(p.x) - 0.5;     // spacing: 1
   q.y = fract(p.y) - 0.5;
-  q.z =  fract(p.z) - 0.5; // can use mod if you want other spacing
+  q.z = fract(p.z) - 0.5;// fract(p.z) - 0.5; // + iTime - 0.5; // fract(p.z) - .5; // spacing: .25
   
   float sf = 1.5;
   
@@ -56,6 +70,7 @@ float sceneSDF(vec3 p) {
   float s4 = spherecSDF(q, vec3(0.0,-vm*sf,0.0), 0.1*sf);
   //float s2 = sdUnion_s(spherecSDF(q, vec3(0.0, vm*0.1, 0.0), 0.15), max(s1,b1), 0.2);
   float s2 = sdUnion_s(s4, sdUnion_s(v1, max(max(s1,b1), -s3), 0.2), 0.2);
+  
   return s2;
   
  }
@@ -130,12 +145,13 @@ vec3 shading( vec3 v, vec3 n, vec3 dir, vec3 eye ) {
 }
 
 float march(vec3 eye, vec3 viewRayDirection, inout float depth, inout vec3 n) {
-    float start = 1.0;
+    float start = 0.0;
     float end = max_depth;
     depth = start;
     for(int i = 0; i < 512; i++) 
     {
         vec3 v = eye + viewRayDirection*depth;
+       
         float dist = sceneSDF(v);
         if(dist < stop_threshold) {
           n = normalize( gradient(eye + viewRayDirection*depth));
@@ -170,13 +186,15 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
 {
     // Normalized pixel coordinates (from 0 to 1)
     vec2 uv = fragCoord/iResolution.xy;
+    //uv *= rot(iTime*0.001);
 
     // Time varying pixel color
     //vec3 col = 0.5 + 0.5*cos(iTime+uv.xyx+vec3(0,2,4));
-    vec3 dir = ray_dir( 45.0, iResolution.xy, fragCoord.xy);
+    vec3 dir = ray_dir( 45.0, iResolution.xy,  fragCoord.xy);
     float depth = 0.0;
     vec3 n; // the normal
     vec3 eye = vec3(0.0, 0.0, 3.5);
+   
     mat3 rot = rotationXY( ( iMouse.xy - iResolution.xy * 0.5 ).yx * vec2( 0.01, -0.01 ) );
 	dir = rot * dir;
 	eye = rot * eye;
