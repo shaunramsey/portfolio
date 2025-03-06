@@ -44,13 +44,17 @@ float sceneSDF(vec3 p) {
   q.y = fract(p.y) - 0.5;
   q.z =  fract(p.z) - .5; // spacing: .25
   
-  float s1 =  sphereSDF(q, 0.2);
-  float b1 = boxSDF(q, vec3(0.15));
-  float vm = 0.3*sin(iTime*0.7);
-  float v1 = spherecSDF(q, vec3(0.0,vm,0.0), 0.1);
-  float s3 = sphereSDF(q, 0.18);
+  float sf = 1.5;
+  
+  
+  float s1 =  sphereSDF(q, 0.2*sf);
+  float b1 = boxSDF(q, vec3(0.15*sf));
+  float vm = 0.35*sin(iTime*0.7);
+  float v1 = spherecSDF(q, vec3(0.0,vm*sf,0.0), 0.1*sf);
+  float s3 = sphereSDF(q, 0.18*sf);
+  float s4 = spherecSDF(q, vec3(0.0,-vm*sf,0.0), 0.1*sf);
   //float s2 = sdUnion_s(spherecSDF(q, vec3(0.0, vm*0.1, 0.0), 0.15), max(s1,b1), 0.2);
-  float s2 = sdUnion_s(v1, max(max(s1,b1), -s3), 0.2);
+  float s2 = sdUnion_s(s4, sdUnion_s(v1, max(max(s1,b1), -s3), 0.2), 0.2);
   return s2;
   
  }
@@ -126,9 +130,9 @@ vec3 shading( vec3 v, vec3 n, vec3 dir, vec3 eye ) {
 
 float march(vec3 eye, vec3 viewRayDirection, inout float depth, inout vec3 n) {
     float start = 0.0;
-    float end = 200.0;
+    float end = 2000.0;
     depth = start;
-    for(int i = 0; i < 128; i++) 
+    for(int i = 0; i < 512; i++) 
     {
         vec3 v = eye + viewRayDirection*depth;
         float dist = sceneSDF(v);
