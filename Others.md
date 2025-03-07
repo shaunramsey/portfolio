@@ -12,7 +12,7 @@ My dive into 'modern' mobile development probably began with a pair of apps buil
 
 | Application Description | App Image |
 |-------------|--------------|
-| Later I'd bring a team to NASA Space Apps Challenge in 2017. We built a couple of apps to submit for that challenge [here](https://2017.spaceappschallenge.org/challenges/earth-and-us/you-are-my-sunshine/teams/dream-team-1). You can see an example screen that pulls in real solar data and balances the energy consumption against incoming power and, hey, we were a global nominee as a local people's choice winner.| <img src="https://github.com/shaunramsey/SolarEnergyPlanner/blob/master/device-2017-05-04-234456.png" width="200">.|
+| Later I'd bring a team to NASA Space Apps Challenge in 2017. We built a couple of apps to submit for that challenge [here](https://2017.spaceappschallenge.org/challenges/earth-and-us/you-are-my-sunshine/teams/dream-team-1). You can see an example screen that pulls in real solar data and balances the energy consumption against incoming power and, hey, we were a global nominee as a local people's choice winner.| <img src="mobile/solarplanner.png" width="200">.|
 
 Sometimes I've done some development for my own purposes. I built [this calculator](http://cthulhudreams.us/ksp/) for KSP around 2015 to tackle some delta v and transfer computations. Some of that moved in game or was done completely in mods but I do so love to play games vanilla. The UX on this is quite awful, but it was tucked away and hidden meant only for me to muck about - so if you're trying to use it, yikes!
 
