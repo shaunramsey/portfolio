@@ -1,6 +1,6 @@
 # Other Development I Find Interesting
 
-Here we see different development projects that are of interest to me. There are three main themes. We begin with web development and mobile development and continue with work that I've done to facilitate games (tabletop and otherwise). The third category is largely education focused and demonstrates some of my work with students or work intended for and inspired by the students I've taught over the years.
+Here we see different development projects that are of interest to me. You can go [back to the main page](Readme.md) to see my projects in rendering and gaming. For this page, there are three main themes. We begin with web development and mobile development and continue with work that I've done to facilitate games (tabletop and otherwise). The third category is largely education focused and demonstrates some of my work with students or work intended for and inspired by the students I've taught over the years.
 
 While this is mostly just going to be a page of links, you'll find a bunch of breadcrumbs of different projects I poked and prodded at varying times. Most of these development projects need a little UX love, as I love to play around and get things working and leave the cleaning up for later. These are also not really meant to be public facing, but I thought I would try to find a place to expose them all so that others can know what I've found interesting to work on over time. Dates posted are approximate, but they should be accurate.
 
