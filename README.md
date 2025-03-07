@@ -6,7 +6,9 @@ I'm working my way on splitting this up into three prongs. Bear with me as that 
 
 These are just fun images/animations from different renders throughout the years. The concept of fun or interesting applies to me - so your mileage may vary. Dates are approximations but they should be accurate. I'll do my best to contextualize their creation. Note that this isn't a full development portfolio but I'll link to some of those [here](Others.md). 
 
-2025. March. Continued exploration of fragment shaders on shadertoy today. On the way to super fractals, produced the image below, using this [fragment shader](superfractal/lyap.frag). I then moved along to my super fractal and used this [fragment shader](superfractal/super.frag) which is obviously derived from the paper and the other fragment shader I wrote. Anyway, the impressive bit is 12k iterations at 60fps. Gotta love modern GPUs!
+### 2025. 
+
+Continued exploration of fragment shaders on shadertoy today. On the way to super fractals, produced the image below, using this [fragment shader](superfractal/lyap.frag). I then moved along to my super fractal and used this [fragment shader](superfractal/super.frag) which is obviously derived from the paper and the other fragment shader I wrote. Anyway, the impressive bit is 12k iterations at 60fps. Gotta love modern GPUs!
 
 <img src="superfractal/lyap.png" height="200"> <img src="superfractal/superfractal.png" height="200">
 
@@ -18,7 +20,9 @@ These are just fun images/animations from different renders throughout the years
 <img src="raymarch/instance1.png" height="200"> <img src="raymarch/instance2.png" height="200">
 
 
-2018. Some of that work with students on the super fractal led to us building a few fun visualizations (mostly to help the students learn iterative functions) like:
+### 2018.
+
+Some of that work with students on the super fractal led to us building a few fun visualizations (mostly to help the students learn iterative functions) like:
 
 <img src="https://github.com/shaunramsey/FractalExploration/blob/master/Iterations/julia_set_animation2.gif" height="150"> <img src="https://github.com/r-chambers/FractalExploration/blob/master/Fractals/Markus-Lyapunov%20Fractals/Anim_3D_Fractal_ABC.gif" height="150"> <img src="https://github.com/shaunramsey/FractalExploration/blob/master/Iterations/julia_set.png" height="150"> <img src="https://github.com/shaunramsey/FractalExploration/blob/master/Iterations/Mandelbrot_Set.png" height="150"> 
 
