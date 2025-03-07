@@ -1,4 +1,8 @@
-# Ramsey's Portfolio of Fun Renders (and [Other Things](Others.md))
+# Ramsey's Portfolio of Fun Development, Games, and Renders 
+
+I'm working my way on splitting this up into three prongs. Bear with me as that happens. For now, this is my rendering page and you can see some random dev stuff over in [other stuff](Others.md).
+
+## Rendering and Fun Images
 
 These are just fun images/animations from different renders throughout the years. The concept of fun or interesting applies to me - so your mileage may vary. Dates are approximations but they should be accurate. I'll do my best to contextualize their creation. Note that this isn't a full development portfolio but I'll link to some of those [here](Others.md). 
 
