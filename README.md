@@ -24,7 +24,7 @@ Continued exploration of fragment shaders on shadertoy today. On the way to supe
 
 Some of that work with students on the super fractal led to us building a few fun visualizations (mostly to help the students learn iterative functions) like:
 
-<img src="https://github.com/shaunramsey/FractalExploration/blob/master/Iterations/julia_set_animation2.gif" height="150"> <img src="https://github.com/r-chambers/FractalExploration/blob/master/Fractals/Markus-Lyapunov%20Fractals/Anim_3D_Fractal_ABC.gif" height="150"> <img src="https://github.com/shaunramsey/FractalExploration/blob/master/Iterations/julia_set.png" height="150"> <img src="https://github.com/shaunramsey/FractalExploration/blob/master/Iterations/Mandelbrot_Set.png" height="150"> 
+<img src="fractals/julia_set_animation2.gif" height="150"> <img src="fractals/3dabc.gif" height="150"> <img src="fractals/julia_set.png" height="150"> <img src="fractals/mandelbrot.png" height="150"> 
 
 
 ### 2017.
