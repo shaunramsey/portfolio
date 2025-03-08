@@ -1,4 +1,4 @@
-Nav >| [Graphics](README.md) | [Creative](Creative.md) | [Others](Others.md)
+[Graphics](README.md) | [Creative](Creative.md) | [Others](Others.md)
 
 # More Creative Pursuits and Games
 

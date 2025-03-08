@@ -1,4 +1,4 @@
-Nav >| [Graphics](README.md) | [Creative](Creative.md) | [Others](Others.md)
+[Graphics](README.md) | [Creative](Creative.md) | [Others](Others.md)
 
 # Other Development I Find Interesting
 
