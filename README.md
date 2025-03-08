@@ -1,4 +1,4 @@
-[Graphics](README.md) | [Creative](Creative.md) | [Others](Others.md)
+Graphics | [Creative](Creative.md) | [Others](Others.md)
 
 # Ramsey's Portfolio of Fun Development, Games, and Renders 
 
