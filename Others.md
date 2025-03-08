@@ -1,3 +1,5 @@
+Nav >| [Graphics](README.md) | [Creative](Creative.md) | [Others](Others.md)
+
 # Other Development I Find Interesting
 
 Here we see different development projects that are of interest to me. You can go [back to the main page](README.md) to see my projects in rendering and gaming. For this page, there are three main themes. We begin with web development and mobile development and continue with work that I've done to facilitate games (tabletop and otherwise). The third category is largely education focused and demonstrates some of my work with students or work intended for and inspired by the students I've taught over the years.
