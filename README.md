@@ -1,6 +1,10 @@
+
+
+Nav >| [Graphics](README.md) | [Creative](Creative.md) | [Others](Others.md)
+
 # Ramsey's Portfolio of Fun Development, Games, and Renders 
 
-I'm working my way on splitting this up into three prongs. Bear with me as that happens. For now, this is my rendering page and you can see some random dev stuff over in [other stuff](Others.md).
+I'm working my way on splitting this up into three prongs. Bear with me as that happens. For now, this is my rendering page and you can see some random dev stuff over in [other stuff](Others.md). I'll be adding to my [creative pursuits](Creative.md) page at some point. You may be able to catch some of the material on these pages in a different format (sometimes more verbose and sometimes less) on one of [my websites](http://shaunramsey.com).
 
 ## Rendering and Fun Images
 
