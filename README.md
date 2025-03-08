@@ -10,7 +10,7 @@ These are just fun images/animations from different renders throughout the years
 
 ### 2025. 
 
-Continued exploration of fragment shaders on shadertoy today. On the way to super fractals, produced the lyapunov fractal, using a [fragment shader](superfractal/lyap.frag) on shadertoy. I then moved along to my super fractal and used this [fragment shader](superfractal/super.frag) which is obviously derived from my paper. Anyway, the impressive bit is 12k iterations at 60fps. Gotta love modern GPUs! I eventually pushed on this to [add animation](superfractal/super-lessglobal.frag) and created a small gif for display below. The intersection flipping in the upper right at the end is really when things start to get interesting. The "stability" fighting for different 'a' values in our algorithm is just so very interesting.
+Continued exploration of fragment shaders on shadertoy today. On the way to super fractals, produced the lyapunov fractal, using a [fragment shader](superfractal/lyap.frag) on shadertoy. I then moved along to my super fractal and used this [fragment shader](superfractal/super.frag) which is obviously derived from my paper. Anyway, the impressive bit is 12k iterations at 60fps. Gotta love modern GPUs! I eventually pushed on this to [add animation](superfractal/super-lessglobal.frag) and created a small gif for display below. The intersection flipping in the upper right at the end is really when things start to get interesting. The "stability" fighting for different 'a' values in our algorithm is just so very interesting. The gif is only 15 fps, but the renderer runs vsync'd at 60fps on my machine. Load up the fragment shader and let it run for a bit - keeping an eye on that upper corner. For this animation I changed "n" to 2. Just before mainImage you'll see an int nin. That variable represents how many times the value on each axis is repeated before moving to the other. If you know Lyapunov fractals, you're used to seeing "BBAB". Our Super fractal uses something more akin to "AAAABBBB" where one axis is repeated 'n' times and then the other axis is repeated n times. We typically don't talk about them this way in our paper though, referring instead to b_1 and b_2, so in the code you'll see reference simply to "getb" to figure out which "A" or "B" value to grab. Honestly, that's more rambling on this topic than I intended and we're here for the images and animations. So, check it out and ask questions if you have any.
 
 <img src="superfractal/lyap.png" height="200"> <img src="superfractal/superanimation.gif" height="200">
 
@@ -19,7 +19,7 @@ Continued exploration of fragment shaders on shadertoy today. On the way to supe
 
 <img src="raymarch/raymarchimage.png" height="200"> <img src="raymarch/raymarchimage2.png" height="200">
 
-<img src="raymarch/instance1.png" height="200"> <img src="raymarch/instance2.png" height="200">
+<img src="raymarch/instance1.png" height="200"> <img src="raymarch/raymarchanimation.gif" height="200">
 
 
 ### 2018.
