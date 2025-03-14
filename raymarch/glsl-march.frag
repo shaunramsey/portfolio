@@ -1,14 +1,26 @@
-////shader.txt for fragment shader on toyshader
-////for the beginning implementation of this shader - see:
-////https://www.shadertoy.com/view/XsB3Rm from "gltracy"
+#version 300 es
+// this code runs on glsl.app
+// - an adaptation of my instanced work that began with https://www.shadertoy.com/view/XsB3Rm from "gltracy" as the code base
+// however, I've nuked the cube map for a 2d texture  - wasn't sure how to load a cubemap there
+
 ////implements raymarching for terrain generation
 
+
+// math
+precision highp float;
 // math
 const float PI = 3.14159265359;
 const float DEG_TO_RAD = PI / 180.0;
 const float stop_threshold = 0.001;
-
+uniform sampler2D u_tex[16];
+uniform vec2 u_tex0Resolution;
 const float max_depth = 50.0;
+uniform float u_time;
+uniform vec2 u_resolution;
+uniform vec2 u_mouse;
+
+in vec2 uv;
+out vec4 fragColor;
 
 // Octahedron SDF - https://iquilezles.org/articles/distfunctions/
 float sdOctahedron(vec3 p, float s) {
@@ -38,8 +50,8 @@ float spherecSDF(vec3 p, vec3 c, float r) {
 }
 
 float boxSDF( vec3 p , vec3 b ) {
- p.xz *= rot(iTime);
- p.xy *= rot(iTime*0.2);
+ p.xz *= rot(u_time);
+ p.xy *= rot(u_time*0.2);
  vec3 d = abs(p) - b;
   
  float sd = min(max(d.x,max(d.y,d.z)),0.0) + length(max(d,0.0));
@@ -55,18 +67,18 @@ float sdUnion_s( float a, float b, float k ) {
 
 float sceneSDF(vec3 p) {
   vec3 q = p;
-  p.xy *= rot(iTime*0.2);
-  p.z += iTime*0.3;
+  p.xy *= rot(u_time*0.2);
+  p.z += u_time*0.3;
   q.x = fract(p.x) - 0.5;     // spacing: 1
   q.y = fract(p.y) - 0.5;
-  q.z = fract(p.z) - 0.5;// fract(p.z) - 0.5; // + iTime - 0.5; // fract(p.z) - .5; // spacing: .25
+  q.z = fract(p.z) - 0.5;// fract(p.z) - 0.5; // + u_time - 0.5; // fract(p.z) - .5; // spacing: .25
   
   float sf = 1.5;
   
   
   float s1 =  sphereSDF(q, 0.2*sf);
   float b1 = boxSDF(q, vec3(0.15*sf));
-  float vm = 0.35*sin(iTime*0.7);
+  float vm = 0.35*sin(u_time*0.7);
   float v1 = spherecSDF(q, vec3(0.0,vm*sf,0.0), 0.1*sf);
   float s3 = sphereSDF(q, 0.18*sf);
   float s4 = spherecSDF(q, vec3(0.0,-vm*sf,0.0), 0.1*sf);
@@ -140,8 +152,8 @@ vec3 shading( vec3 v, vec3 n, vec3 dir, vec3 eye ) {
 		
 		final += light_color * mix( diffuse, specular, F );
 	}
-
-    final += texture( iChannel0, ref ).rgb * fresnel( Ks, n, -dir );
+    vec4 tex = texture(u_tex[0], ref.xy);
+    final += tex.xyz* fresnel( Ks, n, -dir); // texture( iChannel0, ref ).rgb * fresnel( Ks, n, -dir );
     //final = texture(iChannel0, ref).rgb;
 	return final;
 }
@@ -184,27 +196,31 @@ mat3 rotationXY( vec2 angle ) {
 		s.y * c.x, -s.x,  c.y * c.x
 	);
 }
-void mainImage( out vec4 fragColor, in vec2 fragCoord )
+
+
+void main() // out vec4 fragColor, in vec2 fragCoord )
 {
     // Normalized pixel coordinates (from 0 to 1)
-    vec2 uv = fragCoord/iResolution.xy;
+    //vec2 uv =  gl_FragCoord.xy/u_resolution.xy;
     //uv *= rot(iTime*0.001);
 
     // Time varying pixel color
     //vec3 col = 0.5 + 0.5*cos(iTime+uv.xyx+vec3(0,2,4));
-    vec3 dir = ray_dir( 45.0, iResolution.xy,  fragCoord.xy);
+    vec3 dir = ray_dir( 45.0, u_resolution.xy,  gl_FragCoord.xy);
     float depth = 0.0;
     vec3 n; // the normal
     vec3 eye = vec3(0.0, 0.0, 3.5);
    
-    mat3 rot = rotationXY( ( iMouse.xy - iResolution.xy * 0.5 ).yx * vec2( 0.01, -0.01 ) );
+    mat3 rot = rotationXY( ( u_mouse.xy - u_resolution.xy * 0.5 ).yx * vec2( 0.01, -0.01 ) );
 	dir = rot * dir;
 	eye = rot * eye;
     
     
     march(eye, dir, depth, n);
     if(depth >= max_depth) {    // Output to screen
-      fragColor = texture(iChannel0, dir);
+      //fragColor = texture(u_tex[0], dir.xy);
+      fragColor = vec4(1.0, 0.0, 0.0, 1.0);
+      fragColor = texture(u_tex[0], dir.xy);
       //fragColor = vec4(depth,depth,0.0,1.0);
     } else {
       vec3 pos = eye + dir * depth;
@@ -215,3 +231,28 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
     
     
 }
+
+// precision highp float;
+// precision highp sampler2D;
+
+// in vec2 uv;
+// out vec4 out_color;
+
+// uniform vec2 u_resolution;
+// uniform float u_time;
+// uniform vec4 u_mouse;
+// uniform sampler2D u_textures[16];
+
+// void main(){
+//     vec2 st = (2. * uv - 1.) * vec2(u_resolution.x / u_resolution.y, 1.);
+
+//     vec2 mouse = u_mouse.xy / u_resolution;
+
+//     out_color = vec4(
+//         0.5 * sin(u_time) + 0.5, 
+//         abs(st), 
+//         1.
+//     );
+
+//     out_color = texture(u_textures[0], st);
+// }

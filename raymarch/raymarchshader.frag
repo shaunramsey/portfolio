@@ -1,4 +1,5 @@
 ////shader.txt for fragment shader on toyshader
+////https://www.shadertoy.com/view/XsB3Rm from "gltracy" is the start of some of this code base
 ////implements raymarching for terrain generation
 
 // math
