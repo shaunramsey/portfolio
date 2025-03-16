@@ -11,6 +11,11 @@ These are just fun images/animations from different renders throughout the years
 ### 2025. 
 I spent a good deal of the beginning of 2025 poking at rendering. This meant a healthy dive into Vulkan and shaders. Shadertoy is a great way to experiment with fragment shaders and thus I've been doing a bit of that in between my vulkan dives. You'll see some of those results below.
 
+Added some chroma shift to the spikes from the lens flare. Also fixed the light flaring from the oppsoite side of the camera. Added some handles for the chroma and some time dependency shifts. Decided to show a toggle of the chroma. This gif begins by showing you a light in the bottom left that does not have lens flare. It's just a little sphere sitting down there. I removed the environment map, but left the geometry to help you really see what the lens flare is adding. Anyway, feel free to try the [fragment shader](lensflare/chroma.frag) for this version. The gif is below, but I'm not sure the 15 fps and color adjustments do the animation full due.
+
+<img src="lensflare/chromanocube.gif">
+
+
 I decided to toy around with adding lens flare to my raymarcher. The gist is built upon the idea that light shining into a lens produces ghost orbs that often show blips of light across the rgb spectrum due to the differing wavelengths / refraction. Often the light itself will appear with spokes. This work builds on and modularizes the work of [Musk's Lens Flare](https://www.shadertoy.com/view/4sX3Rs) but with lots of handles to dial in exactly what you want. I think the effects are probably a lot more "in your face" than where I would want to finally end up - but it really does depend on the brightness of the existing scene or the effect that you're trying to generate. My [fragment shader](lensflare/lensflare.frag) that incorporates the lens flare into the raymarcher below has quite a lot of explanation for generating the ghost orbs and dialing in the 'light flare' effects. But why don't you see for yourself:
 
 <img src="lensflare/flareangle.gif" height="200"> <img src="lensflare/lensflare1.gif" height="200"> <img src="lensflare/flareeffects.gif" height="200">

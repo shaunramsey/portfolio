@@ -1,6 +1,3 @@
-////shader.txt for fragment shader on toyshader
-////implements raymarching for terrain generation
-
 // math
 const float PI = 3.14159265359;
 const float DEG_TO_RAD = PI / 180.0;
@@ -176,6 +173,8 @@ vec3 ghost(float bottom, vec2 uvmov, vec3 scale, vec2 pos, float scalePower, vec
 //try 0.4, 0.6 and 0.8
 #define LIGHT_AMBIENCE 0.8
 
+#define CHROMATIC_SPIKES true
+
 vec3 lensflare(vec2 uv, vec2 pos, out vec3 lightflare, out vec3 lensflare)
 {
 	vec2 main = uv-pos; //a vector that points at this particular fragment
@@ -190,11 +189,11 @@ vec3 lensflare(vec2 uv, vec2 pos, out vec3 lightflare, out vec3 lensflare)
 
     //float n = noise(vec2((ang-iTime/18.0)*16.0,dist*32.0));
 
-	float f0 = 1.0/(length(main) * FULL_LIGHT_SCALE+1.0);
-	f0 = pow(f0, LIGHT_HALO_SIZE) * LIGHT_CIRCLE_SCALE;
+	float f0li = 1.0/(length(main) * FULL_LIGHT_SCALE+1.0);
+	f0li = pow(f0li, LIGHT_HALO_SIZE) * LIGHT_CIRCLE_SCALE;
 
 	//f0 = f0 + f0 *(sin((ang+1.0/18.0)*12.0)*.1 + dist * 0.1 + 0.8);
-    f0 = f0 + f0 * (sin(angle*NUMBER_OF_SPOKES)*LIGHT_SPOKE + LIGHT_AMBIENCE);
+    float f0 = f0li * (sin((angle+0.1)*NUMBER_OF_SPOKES)*LIGHT_SPOKE + LIGHT_AMBIENCE);
     //f0 = f0+f0*(sin((ang+iTime/18.0 + noise(abs(ang)+n/2.0)*2.0)*12.0)*.1+dist*.1+.8);
     
     
@@ -213,7 +212,15 @@ vec3 lensflare(vec2 uv, vec2 pos, out vec3 lightflare, out vec3 lensflare)
     orb4 = ghost(0.01, mix(uv,uvd,-0.5), vec3(-0.85, -0.9, -0.95), pos, 1.6, vec3(6.0, 3.0, 5.0));
     vec3 orb5 = vec3(0.0);
     orb5 = ghost(0.01, mix(uv,uvd,-0.1), vec3(.8, .9, 1.0), pos, 1.3, vec3(2.0, 2.0, 2.0));
-    lightflare = vec3(f0);
+    
+    if(CHROMATIC_SPIKES)  {
+      lightflare = texture(iChannel1, vec2( (angle+0.1)/(2.0*PI+0.1), 0.5)).rgb * f0 + vec3(f0li);
+    }
+    else {
+      lightflare = vec3(f0+f0li);
+    }
+    
+    
     lensflare = orb2 + orb3 + orb4 + orb5 + vec3(f2,f22,f23);
 
 	return lightflare+lensflare;
@@ -281,7 +288,7 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
      }
     }
     else if(depth >= end-1.0) {    // Output to screen
-      fragColor = texture(iChannel0, dir);
+      fragColor = vec4(0.0); //texture(iChannel0, dir);
       //fragColor = vec4(depth,depth,0.0,1.0);
     } else {
       vec3 pos = eye + dir * depth;
@@ -306,6 +313,9 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
     col = pow(col, vec3(0.4));
    
      //for only ray marched scene just comment below
-    fragColor += vec4(col, 1.0);
+     if(lightlocoff.z < 0.0) {
+        fragColor += vec4(col, 1.0);
+     }
+    //fragColor.g += clamp(lightlocoff.z, 0.0, 1.0);
     //fragColor = vec4(col, 1.0);    //debug the flare or see the flare alone
 }
