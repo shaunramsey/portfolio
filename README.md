@@ -13,7 +13,7 @@ I spent a good deal of the beginning of 2025 poking at rendering. This meant a h
 
 The last couple days, I've mucked around in shader toy with water generation using sum of sines. I love that you can get direct analytical derivatives from the sines or exponentials of sines. FFT is the natural evolution of this, but sum of sines is a much quicker implementation. I hacked in a setting sun with a sky gradient, some whiter wave tips and some cool solar highlights. Check out the animation. I'm using raymarching - yet again - as it is certainly my favorite thing since sliced bread. 
 
-<img src="raymarch/wateranimated.gif" height="200"> <img src="raymarchwateranimated2.gif" height="200">
+<img src="raymarch/wateranimated.gif" height="200"> <img src="raymarch/wateranimated2.gif" height="200">
 
 Sometimes, as you're messing around with something new, you get quite a few erroneous steps. Some of these can be fun and interesting. Check out a couple:
 
