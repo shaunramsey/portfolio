@@ -11,7 +11,11 @@ These are just fun images/animations from different renders throughout the years
 ### 2025. 
 I spent a good deal of the beginning of 2025 poking at rendering. This meant a healthy dive into Vulkan and shaders. Shadertoy is a great way to experiment with fragment shaders and thus I've been doing a bit of that in between my vulkan dives. You'll see some of those results below.
 
-The last couple days, I've mucked around in shader toy with water generation using sum of sines. I love that you can get direct analytical derivatives from the sines or exponentials of sines. FFT is the natural evolution of this, but sum of sines is a much quicker implementation. I hacked in a setting sun with a sky gradient, some whiter wave tips and some cool solar highlights. Check out the animation. I'm using raymarching - yet again - as it is certainly my favorite thing since sliced bread. 
+I spent a day reading through aurora generations. The gist is another sum of sines that's often turned into a distance field in screen space. The ideas lean on Lawlor and Genetti's method which, in turn, used Rong and Tan's jump flooding to produce a blurred distance field from a sum of sines - or even just some other image. Then the 'volume' of the aurora is ray marched to produce an image. So I decided to hack something rather linearly in screenspace just to get a feel for what I would want an aurora to look like. I made this [fragment shader function](raymarch/aurora.frag) and used it as my skyColor (ditching the old gradients and sun calculations). Anyway, this aurora is flat - against the "far plane" rendering rather than a volumetric ray march through an aurora distance field. 
+
+<img src="raymarch/aurorafrag.gif" height="200">
+
+The last couple days, I've mucked around in shader toy with water generation using sum of sines. I love that you can get direct analytical derivatives from the sines or exponentials of sines. FFT is the natural evolution of this, but sum of sines is a much quicker implementation. Tessendorf's work seems to be where everyone derives their water these days. At this point, through, I hacked in a setting sun with a sky gradient, some whiter wave tips and some solar highlights. Check out the animation. I'm using raymarching - yet again - as it is certainly my favorite thing since sliced bread. 
 
 <img src="raymarch/wateranimated.gif" height="200"> <img src="raymarch/wateranimated2.gif" height="200">
 
