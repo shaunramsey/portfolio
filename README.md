@@ -11,6 +11,10 @@ These are just fun images/animations from different renders throughout the years
 ### 2025. 
 I spent a good deal of the beginning of 2025 poking at rendering. This meant a healthy dive into Vulkan and shaders. Shadertoy is a great way to experiment with fragment shaders and thus I've been doing a bit of that in between my vulkan dives. You'll see some of those results below.
 
+Decided to muck about with some semi-Lagrangian fluid sim for potential introduction into one of my falling sand simulators / games. May move this to a more complete fluid sim - with or without multiple dimensions. Here's a sample running at 60fps in a C++ dear imgui display.
+
+<img src="fluid/somesmoke.gif" height="200">
+
 I spent a day reading through aurora generations. The gist is another sum of sines that's often turned into a distance field in screen space. The ideas lean on Lawlor and Genetti's method which, in turn, used Rong and Tan's jump flooding to produce a blurred distance field from a sum of sines - or even just some other image. Then the 'volume' of the aurora is ray marched to produce an image. So I decided to hack something rather linearly in screenspace just to get a feel for what I would want an aurora to look like. I made this [fragment shader function](raymarch/aurora.frag) and used it as my skyColor (ditching the old gradients and sun calculations). Anyway, this aurora is flat - against the "far plane" rendering rather than a volumetric ray march through an aurora distance field. There are still a few things I'd tweak - even to this flat version - so you may see updates on it in the future.
 
 <img src="raymarch/aurorafrag.gif" height="200">
